@@ -1,0 +1,15 @@
+@import "../../styles/mixins";
+.servicesSection {
+  @include makeContainer(200px, 200px);
+  margin-top: 3rem;
+  @media screen and (max-width: 480px) {
+    @include makeContainer(10px, 10px);
+    margin-top: 1.5rem;
+  }
+
+  .mainHeading {
+    @include useSfpro;
+    @include useGoldenText;
+    text-align: center;
+  }
+}

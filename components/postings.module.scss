@@ -1,0 +1,83 @@
+@import "../styles/mixins";
+.mainContainer {
+  margin-top: 5rem;
+  @include makeContainer(200px, 200px);
+  @media screen and (max-width: 480px) {
+    @include makeContainer(10px, 10px);
+    margin-top: 2rem;
+  }
+  .headingArc {
+    @include useSfpro;
+    color: white;
+    font-size: 1.2rem;
+    @media screen and (max-width: 480px) {
+      font-size: 1rem;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+  .singleJob {
+    margin: 5px 0px;
+    border-bottom: 1px rgba($color: #fff, $alpha: 0.2) solid;
+    line-height: 20px;
+  }
+  .jobTitle {
+    @include useSfpro;
+    color: rgba($color: #fff, $alpha: 0.9);
+    font-size: 1.1rem;
+  }
+  .jobDescription {
+    transition: all ease-in-out 0.5s;
+    @include useSfpro;
+    color: rgba($color: #fff, $alpha: 0.9);
+    font-size: 1.1rem;
+  }
+  .iconContainer {
+    margin-left: auto;
+    color: rgba($color: #fff, $alpha: 0.9);
+    cursor: pointer;
+  }
+
+  .formInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px #a8a8a8 solid;
+    margin: 1rem 0rem;
+    width: 100%;
+    &::placeholder {
+      @include usePlayful;
+    }
+  }
+  .formLabel {
+    color: rgba($color: #fff, $alpha: 0.7);
+    @include usePlayful;
+  }
+  .button {
+    margin-top: 2rem;
+    padding: 10px 10px;
+    background: white;
+    color: black;
+    width: 200px;
+    @include useSfpro();
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    @media screen and (max-width: 480px) {
+      margin: 10px 5px;
+      width: 100%;
+      padding: 10px 5px;
+    }
+    .buttonIcon {
+      transition: transform ease 0.35s, opacity ease 0.35s;
+      position: absolute;
+      opacity: 0;
+      top: 30%;
+      transform: translateX(-10px);
+    }
+    &:hover .buttonIcon {
+      opacity: 1;
+      transform: translateX(10px);
+    }
+  }
+  
+}

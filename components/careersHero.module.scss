@@ -1,0 +1,70 @@
+@import "../styles/mixins";
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/assets/images/careersHero.jpg");
+  height: 100vh;
+}
+.headSection {
+  @include makeContainer(200px, 200px);
+  @media screen and (max-width: 480px) {
+    @include makeContainer(0px, 0px);
+    margin-left: 1rem;
+  }
+}
+
+.whiteText {
+  @include usePlayful;
+  line-height: 130%;
+  font-size: 3.5rem;
+  letter-spacing: 150%;
+  color: white;
+  font-weight: 700;
+  @media screen and (max-width: 480px) {
+    font-size: 2.7rem;
+    line-height: 130%;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 410px) {
+    font-size: 2rem;
+    line-height: 130%;
+  }
+}
+
+.goldenText {
+  @include usePlayful;
+  line-height: 130%;
+  letter-spacing: 150%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #daa520;
+  @media screen and (max-width: 480px) {
+    font-size: 2.7rem;
+    line-height: 130%;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 410px) {
+    font-size: 2rem;
+    line-height: 130%;
+  }
+}
+.button {
+  padding: 10px 30px;
+  background: white;
+  color: black;
+  width: 200px;
+  @include useSfpro();
+  border-radius: 2px;
+  border: none;
+  position: relative;
+  transition: transform ease 0.35s, opacity ease 0.35s;
+
+  .buttonIcon {
+    transition: transform ease 0.35s, opacity ease 0.35s;
+    position: absolute;
+    top: 32%;
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  &:hover .buttonIcon {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+}

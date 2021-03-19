@@ -1,0 +1,119 @@
+@import "../../styles/mixins";
+
+.container {
+  @include makeContainer(200px, 200px);
+  margin-top: 5rem;
+  @media screen and (max-width: 1400px) and (min-width: 800px) {
+    @include makeContainer(150px, 150px);
+  }
+  @media screen and (max-width: 480px) {
+    @include makeContainer(10px, 10px);
+    margin-top: 2rem;
+  }
+  .mainHeading {
+    @media screen and (max-width: 480px) {
+      text-align: end;
+    }
+  }
+  .formHeading {
+    @include useWhiteText();
+    position: relative;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      font-size: 3rem;
+    }
+    &::after {
+      content: "in touch";
+      position: absolute;
+      top: 85%;
+      left: 38%;
+      @include useGoldenText;
+      @include usePlayful;
+      white-space: nowrap;
+      @media screen and (max-width: 1400px) and (min-width: 800px) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 480px) {
+        left: 0;
+      }
+    }
+  }
+  .formInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px #a8a8a8 solid;
+    margin: 1rem 0rem;
+    width: 100%;
+    color: white;
+    &::placeholder {
+      @include usePlayful;
+    }
+  }
+  .button {
+    margin-top: 2rem;
+    padding: 10px 10px;
+    background: white;
+    color: black;
+    width: 200px;
+    @include useSfpro();
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    @media screen and (max-width: 480px) {
+      margin: 15px 0px;
+      width: 100%;
+    }
+    .buttonIcon {
+      transition: transform ease 0.35s, opacity ease 0.35s;
+      position: absolute;
+      top: 35%;
+      opacity: 0;
+      transform: translateX(-10px);
+      @media screen and (max-width:480px) {
+        top: 30%;
+      }
+    }
+    &:hover .buttonIcon {
+      opacity: 1;
+      transform: translateX(10px);
+    }
+  }
+
+  .headings {
+    @include usePlayful;
+    @include useWhiteText;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    white-space: nowrap;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      margin-left: 2rem;
+    }
+    @media screen and (max-width: 480px) {
+      margin-left: 0rem;
+    }
+  }
+  .detailsSection {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    line-height: 10px;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      margin-left: 2rem;
+    }
+    @media screen and (max-width: 480px) {
+      margin-left: 0rem;
+    }
+    .singleDetail {
+      @include useSfpro;
+      font-size: 1rem;
+      color: rgba($color: #fff, $alpha: 0.7);
+      font-weight: 400;
+    }
+  }
+}
+.footerSection {
+  margin-top: 20vh;
+  @media screen and (max-width: 480px) {
+    margin-top: unset;
+  }
+}

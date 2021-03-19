@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+
+.mainContainer {
+  @include makeContainer(200px, 200px);
+  margin-top: 5rem;
+  @media screen and (max-width: 480px) {
+    @include makeContainer(10px, 10px);
+    margin-top: 2rem;
+  }
+  .title {
+    text-align: center;
+    width: auto;
+    white-space: pre-wrap;
+    @include useGoldenText;
+  }
+  .createdAt {
+    @include useSfpro;
+    color: rgba($color: #fff, $alpha: 0.4);
+    text-align: center !important;
+    font-size: 0.9rem;
+  }
+  .bodySection {
+    @include makeContainer(20px, 20px);
+    margin-top: 2rem;
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 120%;
+      color: white;
+      font-weight: 300;
+      @include useSfpro;
+      b {
+        color: white;
+        @include useSfpro;
+      }
+    }
+    h3,
+    h1,
+    h2,
+    h4,
+    h5 {
+      color: white;
+      @include useSfpro;
+    }
+    strong {
+      color: white;
+      @include useSfpro;
+    }
+
+    .bodyText {
+      @include useSfpro;
+      font-size: 1.2rem;
+      color: white;
+    }
+  }
+}

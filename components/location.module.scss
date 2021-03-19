@@ -1,0 +1,111 @@
+@import "../styles/mixins";
+.interiorSection {
+  @include makeContainer(0px, 50px);
+  margin-top: 20vh;
+  .desktopView {
+    display: flex !important;
+  }
+  .mobileView {
+    display: none !important;
+  }
+  @media screen and (max-width: 480px) {
+    @include makeContainer(0px, 0px);
+    margin-top: 3rem;
+    .desktopView {
+      display: none !important;
+    }
+    .mobileView {
+      display: flex !important;
+    }
+  }
+  .headingInterior {
+    @include useSfpro;
+    margin-left: 12vw;
+    color: white;
+    font-size: 1.2rem;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-left: auto;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+  }
+  .mainHeading {
+    position: relative;
+    margin-top: 6rem;
+
+    @media screen and (max-width: 480px) {
+      font-size: 2.7rem;
+      margin-inline: 10px;
+    }
+    &::before {
+      content: "Convenience";
+      position: absolute;
+      top: -90%;
+      left: -8%;
+      @include useWhiteText;
+      @media screen and (max-width: 480px) {
+        font-size: 3rem;
+        left: -8%;
+      }
+    }
+    &::after {
+      content: "Clarity";
+      position: absolute;
+      top: 90%;
+      left: 40%;
+      @include useWhiteText;
+      white-space: nowrap;
+      @media screen and (max-width: 480px) {
+        left: 30%;
+        font-size: 3rem;
+      }
+    }
+  }
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      height: auto;
+    }
+    @media only screen and (max-width: 480px) {
+      height: auto;
+      border-radius: 2px;
+    }
+  }
+  .whiteText {
+    @include usePlayful;
+    line-height: 130%;
+    font-size: 3.5rem;
+    letter-spacing: 150%;
+    color: white;
+    font-weight: 700;
+  }
+
+  .goldenText {
+    @include usePlayful;
+    line-height: 130%;
+    letter-spacing: 150%;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #daa520;
+    @media screen and (max-width: 480px) {
+      font-size: 3rem;
+      left: 10%;
+    }
+  }
+
+  .whiteSmallTextFirstPart {
+    margin-top: 5rem;
+  }
+  @media screen and (max-width: 480px) {
+    .normalParagraph {
+      margin-inline: 10px;
+    }
+  }
+}

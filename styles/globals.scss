@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./mixins";
+html,
+body {
+  padding: 0;
+  background-color: rgba($color: #000000, $alpha: 0.7) !important;  
+  margin: 0;
+  height: 100%;
+  @include useSfpro;
+  overflow-x: hidden;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+b {
+  color: white;
+  @include useSfpro;
+}
+* {
+  box-sizing: border-box;
+}
+// global classes
+
+.whiteText {
+  @include usePlayful;
+  line-height: 130%;
+  font-size: 3.5rem;
+  letter-spacing: 150%;
+  color: white;
+  font-weight: 700;
+}
+
+.goldenText {
+  @include usePlayful;
+  line-height: 130%;
+  letter-spacing: 150%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #daa520;
+}
+
+.normalParagraph {
+  font-size: 1.1rem;
+  letter-spacing: 120%;
+  color: white;
+  font-weight: 300;
+  @include useSfpro;
+}
+.normalHeading {
+  color: white;
+  @include useSfpro;
+}
+.marginLeft {
+  margin-left: 60px;
+  @media screen and (max-width: 1400px) and (min-width: 800px) {
+    margin-left: 40px;
+  }
+}
+.marginRight {
+  margin-right: 60px;
+  @media screen and (max-width: 1400px) and (min-width: 800px) {
+    margin-right: 40px;
+  }
+}
+.widthDesktop {
+  width: 360px;
+  @media screen and (max-width: 1400px) and (min-width: 800px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+ol.carousel-indicators {
+  position: absolute;
+  background-color: rgba($color: #888, $alpha: 0.4);
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  float: left;
+  width: 33.5%;
+  height: 9px;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+
+ol.carousel-indicators li.active {
+  background-color: rgba($color: #daa520, $alpha: 0.8);
+}
+
+// .carousel-control-prev-icon,
+// .carousel-control-next-icon {
+//   height: 100px;
+//   width: 100px;
+//   background-size: 100%, 100%;
+//   border-radius: 50%;
+//   display: none !important;
+//   background-image: none;
+// }
+
+// .carousel-control-next-icon:after {
+//   content: ">";
+//   font-size: 60px;
+//   color: whitesmoke;
+// }
+
+// .carousel-control-prev-icon:after {
+//   content: "<";
+//   font-size: 80px;
+//   color: whitesmoke;
+// }
+// for animation
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// BOUNCE IN DOWN ANIMATION
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+// FADE IN RIGHT ANIMATION
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
