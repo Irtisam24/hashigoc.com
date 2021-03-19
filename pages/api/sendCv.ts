@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import Axios from "axios";
 import nodemailer from "nodemailer";
+import fs from "fs";
 
 import formidable from "formidable";
 
@@ -28,6 +29,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     form.uploadDir = "./public/assets/cvs";
     form.keepExtensions = true;
     form.parse(req, async (err, fields, files) => {
+      form.on("file", (name: string, file: File) => {
+        const data = fs.readFileSync(files.path);
+        fs.writeFileSync(`public/assets/cvs/${file.name}`, data);
+        fs.unlinkSync(files.path);
+      });
       const {
         token,
         fullName,
