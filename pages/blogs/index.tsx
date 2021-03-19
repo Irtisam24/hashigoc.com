@@ -5,7 +5,6 @@ import { Col, Image, Row } from "react-bootstrap";
 import { Footer } from "../../components/footer";
 import { NavBar } from "../../components/navbar";
 
-import mysql from "mysql2/promise";
 
 // custom css
 import styles from "./index.module.scss";

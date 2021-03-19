@@ -7,7 +7,6 @@ import Head from "next/head";
 
 //
 import styles from "./slug.module.scss";
-import mysql from "mysql2/promise";
 import { connectToDatabase } from "../../functions/mongodb";
 
 const createMarkUp = (content) => {
