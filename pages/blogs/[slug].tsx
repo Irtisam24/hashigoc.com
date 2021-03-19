@@ -42,6 +42,19 @@ export default function SingleBlog({ data }) {
   );
 }
 
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: "1" } },
+      { params: { slug: "2" } },
+      { params: { slug: "3" } },
+      { params: { slug: "4" } },
+      { params: { slug: "5" } },
+    ],
+    fallback: false,
+  };
+}
+
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
@@ -54,9 +67,7 @@ export async function getStaticProps({ params }) {
   });
   const [
     rows,
-  ] = await connection.execute("SELECT * FROM blogs WHERE `blog_id`= ?", [
-    slug,
-  ]);
+  ] = await connection.execute("SELECT * FROM blogs WHERE `blog_id`= ?", [slug]);
 
   connection.end();
   if (!rows) {
