@@ -101,6 +101,9 @@
   .number {
     font-size: 2rem;
     position: relative;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      font-size: 1.4rem;
+    }
     &::after {
       @include addContentAfterOrBefore("height");
     }
@@ -108,6 +111,9 @@
   .height {
     font-size: 2rem;
     position: relative;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      font-size: 1.4rem;
+    }
     &::after {
       @include addContentAfterOrBefore("units");
       white-space: nowrap;
@@ -116,6 +122,9 @@
   .area {
     font-size: 2rem;
     position: relative;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      font-size: 1.4rem;
+    }
     &::after {
       @include addContentAfterOrBefore("area");
       white-space: nowrap;

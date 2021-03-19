@@ -28,21 +28,18 @@ export const OurVision = () => {
               {" "}
               <p
                 className={` ${styles.whiteSmallTextFirstPart} normalParagraph`}>
-                Hashi Group of Companies works in establishing mega projects in
-                the prominent cities of Pakistan. Hashi Group Of Companies not
-                only upgrades the lifestyle of the people but also creates an
-                amazing opportunity for the investors who have money in their
-                hands & looking for a safe, secure & profitable investment.
-                Hashi Group Of Companies also has a number of child companies to
-                serve the public in multiple ways
+                Hashi Group of Companies strives to change the way you think
+                about construction by not applying the traditional methods but
+                by bringing innovative techniques in Pakistan to improve the
+                processes and quality of the final product. By not settling for
+                anything less than excellence in every company in the group, we
+                have elevated the industry standards.
               </p>
               <p className={`normalParagraph`}>
                 {" "}
-                The 4 child companies include SHR Marketing 360 for all types of
-                marketing’s, Hash Real Estate & Builders to give property sale &
-                purchase & advisory services, & AASANI to give all the
-                maintenance services at your doorstep. Hashi Group of Companies,
-                the name is quality.
+                Our vision is to help the real estate industry evolve to a point
+                where it has transparency, affordability and each project is
+                compliant with environmental friendliness.
               </p>
             </div>
           </div>

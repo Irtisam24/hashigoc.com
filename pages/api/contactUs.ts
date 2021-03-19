@@ -23,7 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       });
       let info = await transporter.sendMail({
         from: '"Hashi Goc Contact Us Request" <irtasam@shrmarketing360.com>', // sender address
-        to: "irtisam.d@gmail.com", // list of receivers
+        to: "info@hashigoc.com", // list of receivers
         subject: "Contact Us Request From Hashi Goc", // Subject line
         text: `<h2>Contact Us</h2>
         <hr></hr>

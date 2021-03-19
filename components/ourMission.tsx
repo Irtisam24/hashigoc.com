@@ -30,16 +30,16 @@ export const OurMission = () => {
               Paving Way
             </p>
             <p className={` ${styles.whiteSmallTextFirstPart} normalParagraph`}>
-              Because of the reliable development in business, we are satisfied
-              to extend our business to new areas. This will empower us to react
-              successfully to the developing needs of our clients dwelling in
-              different urban areas
+              Experiences in multiple industries of our founder and senior team
+              members provide opportunities for collaboration throughout the
+              group with breathtaking results in each business model offering
+              true depth and clarity.
             </p>
             <p className={`normalParagraph`}>
               {" "}
-              The new openings will be an extraordinary method to construct
-              believably for the Real Estate. We are ideally expanding our
-              business to new areas like: Turkey , Dubai, Karachi, Lahore.
+              Due to this, satisfaction of our clients are ensured which will
+              also allow us to expand in new markets such as Lahore, Karachi,
+              Dubai and Turkey.
             </p>
           </div>
         </Col>
