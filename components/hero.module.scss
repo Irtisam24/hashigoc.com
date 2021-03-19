@@ -1,7 +1,7 @@
 @import "../styles/mixins";
 .headSection {
   @include makeContainer(200px, 200px);
-  
+
   @media screen and (max-width: 480px) {
     @include makeContainer(0px, 0px);
     margin-left: 1rem;
@@ -12,6 +12,9 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  @media screen and (max-width: 480px) {
+    object-fit: contain;
+  }
 }
 
 .whiteText {
