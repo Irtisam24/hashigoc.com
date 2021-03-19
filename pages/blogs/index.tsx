@@ -9,6 +9,7 @@ import mysql from "mysql2/promise";
 
 // custom css
 import styles from "./index.module.scss";
+import { connectToDatabase } from "../../functions/mongodb";
 
 export interface BlogItem {
   id: number;
@@ -66,31 +67,17 @@ export default function Blogs({ data }) {
   );
 }
 export const getStaticProps = async (context) => {
-  // create the connection to database
-  const connection = await mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "hashi_goc",
-  });
+  const { db } = await connectToDatabase();
 
-  const [rows, fields] = await connection.execute(
-    "SELECT blog_id,blog_title,blog_image,slug,created_at FROM blogs Order BY created_at Desc"
-  );
+  const data = await db
+    .collection("blogs")
+    .find({})
+    .sort({ created_at: -1 })
+    .toArray();
 
-  connection.end();
-
-  if (!rows) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
   return {
     props: {
-      data: JSON.parse(JSON.stringify(rows)),
+      data: JSON.parse(JSON.stringify(data)),
     },
   };
 };

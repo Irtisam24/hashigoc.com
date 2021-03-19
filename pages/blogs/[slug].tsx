@@ -8,6 +8,7 @@ import Head from "next/head";
 //
 import styles from "./slug.module.scss";
 import mysql from "mysql2/promise";
+import { connectToDatabase } from "../../functions/mongodb";
 
 const createMarkUp = (content) => {
   return { __html: content };
@@ -57,20 +58,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
+  const id = parseInt(slug);
+  const { db } = await connectToDatabase();
 
-  // create the connection to database
-  const connection = await mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "hashi_goc",
-  });
-  const [
-    rows,
-  ] = await connection.execute("SELECT * FROM blogs WHERE `blog_id`= ?", [slug]);
+  const data = await db.collection("blogs").find({ blog_id: id }).toArray();
 
-  connection.end();
-  if (!rows) {
+  if (!data) {
     return {
       redirect: {
         destination: "/",
@@ -80,7 +73,7 @@ export async function getStaticProps({ params }) {
   } else {
     return {
       props: {
-        data: JSON.parse(JSON.stringify(rows[0])),
+        data: JSON.parse(JSON.stringify(data[0])),
       },
     };
   }
