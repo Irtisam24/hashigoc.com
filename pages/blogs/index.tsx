@@ -65,13 +65,13 @@ export default function Blogs({ data }) {
     </>
   );
 }
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   // create the connection to database
   const connection = await mysql.createConnection({
     host: "localhost",
-    user: "hashpkhr_hashigoc",
-    password: "System32.bits",
-    database: "hashpkhr_hashi_goc",
+    user: "root",
+    password: "",
+    database: "hashi_goc",
   });
 
   const [rows, fields] = await connection.execute(
@@ -92,6 +92,5 @@ export const getServerSideProps = async (context) => {
     props: {
       data: JSON.parse(JSON.stringify(rows)),
     },
-    revalidate: 1,
   };
 };

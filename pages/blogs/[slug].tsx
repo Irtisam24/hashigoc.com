@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import Image from "next/image";
 
 import { Footer } from "../../components/footer";
@@ -43,15 +42,15 @@ export default function SingleBlog({ data }) {
   );
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   const { slug } = params;
 
   // create the connection to database
   const connection = await mysql.createConnection({
     host: "localhost",
-    user: "hashpkhr_hashigoc",
-    password: "System32.bits",
-    database: "hashpkhr_hashi_goc",
+    user: "root",
+    password: "",
+    database: "hashi_goc",
   });
   const [
     rows,
