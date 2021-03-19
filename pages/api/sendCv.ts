@@ -107,7 +107,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               attachments: [
                 {
                   filename: cv.name,
-                  path: cv.path,
+                  filePath: cv.path,
                 },
               ],
               html: `<h2>Job Application</h2>
