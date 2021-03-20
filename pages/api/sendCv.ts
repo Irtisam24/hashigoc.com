@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import Axios from "axios";
 import nodemailer from "nodemailer";
-import fs from "fs";
 
 import formidable from "formidable";
 
@@ -39,6 +38,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         subject,
       }: reqData = fields;
       const { cv } = files;
+      console.log(cv);
+
       try {
         const verifyToken = await Axios.post(
           `https://www.google.com/recaptcha/api/siteverify?secret=6Lfo238aAAAAAIWN1zLeyM5g1JDMDSHDI3f_27Df&response=${token}`
@@ -108,7 +109,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               attachments: [
                 {
                   filename: cv.name,
-                  content: fs.createReadStream(cv.name),
+                  path: cv.path,
                 },
               ],
               html: `<h2>Job Application</h2>
