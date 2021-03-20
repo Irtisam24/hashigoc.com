@@ -26,14 +26,9 @@ export const config = {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const form = new formidable.IncomingForm();
-    form.uploadDir = "./public/assets/cvs";
+    // form.uploadDir = "./public/assets/cvs";
     form.keepExtensions = true;
     form.parse(req, async (err, fields, files) => {
-      form.on("file", (name: string, file: File) => {
-        const data = fs.readFileSync(files.path);
-        fs.writeFileSync(`public/assets/cvs/${file.name}`, data);
-        fs.unlinkSync(files.path);
-      });
       const {
         token,
         fullName,
@@ -132,6 +127,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               <hr></hr>`, // html body
             });
             if (info.messageId) {
+              console.log(info);
               return res.status(200).send("Thank you for reaching out to us!");
             } else {
               return res
