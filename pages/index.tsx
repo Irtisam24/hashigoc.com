@@ -18,6 +18,7 @@ export default function Home() {
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1, viewport-fit=cover'></meta>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <section>
         <NavBar isFixed={true} />

@@ -51,7 +51,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             secure: true,
             dkim: {
               domainName: "default._domainkey.hashigoc.com.",
-              keySelector: "2021",
+              keySelector: "2017",
               privateKey: `-----BEGIN RSA PRIVATE KEY-----
                 MIIEowIBAAKCAQEAzvrypU1kD/KhYXne8YwKD+mzZYv/VwSBYROdMq7FLTPRPSha
                 IlIBQp3+jFvyIuh03cxtCWDDotn/z1q1xk9Z1DHFHEqDezyhGwQ1oU3/wUCxThvM
@@ -108,7 +108,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               attachments: [
                 {
                   filename: cv.name,
-                  filePath: cv.path,
+                  content: fs.createReadStream(cv.name),
                 },
               ],
               html: `<h2>Job Application</h2>
