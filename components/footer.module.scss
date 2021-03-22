@@ -28,6 +28,15 @@
       display: flex !important;
     }
   }
+  @media screen and (max-width: 768px) {
+    @include makeContainer(10px, 10px);
+    .desktopFooter {
+      display: none !important;
+    }
+    .mobileFooter {
+      display: flex !important;
+    }
+  }
   .logo {
     position: relative;
     @include usePlayful;

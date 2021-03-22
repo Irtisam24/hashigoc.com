@@ -9,13 +9,13 @@
   background-attachment: fixed;
   background-size: 100% 100%;
   position: relative;
-  @media screen and (max-width:1400px) and (min-width:800px) {
+  @media screen and (max-width: 1400px) and (min-width: 800px) {
     height: 100%;
-    @include makeContainer(100px,100px)
+    @include makeContainer(100px, 100px);
   }
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     height: auto;
-    @include makeContainer(50px,50px)
+    @include makeContainer(50px, 50px);
   }
   @media screen and (max-width: 480px) {
     @include makeContainer(10px, 10px);
@@ -27,11 +27,16 @@
     @media screen and (max-width: 480px) {
       display: flex !important;
     }
-   
+    @media screen and (max-width: 768px) and (min-width: 500px) {
+      display: flex !important;
+    }
   }
   .desktopView {
     display: flex !important;
     @media screen and (max-width: 480px) {
+      display: none !important;
+    }
+    @media screen and (max-width: 768px) and (min-width: 500px) {
       display: none !important;
     }
   }
@@ -46,10 +51,10 @@
   }
   .paragraphSection {
     margin-top: 8rem;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       margin-top: 5rem;
     }
-    @media screen and (max-width:1400px) and (min-width:800px){
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
       margin-top: 3rem;
     }
     @media screen and (max-width: 480px) {
@@ -63,10 +68,10 @@
     font-size: 3.5rem;
     color: white;
     font-weight: 700;
-    @media screen and (max-width:1400px) and (min-width:800px){
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
       font-size: 3rem;
     }
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       font-size: 3rem;
     }
     @media screen and (max-width: 480px) {
@@ -79,10 +84,10 @@
     font-size: 3.5rem;
     font-weight: 700;
     color: #daa520;
-    @media screen and (max-width:1400px) and (min-width:800px){
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
       font-size: 3rem;
     }
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       font-size: 3rem;
     }
     @media screen and (max-width: 480px) {
@@ -94,7 +99,7 @@
     font-size: 1.2rem;
     color: white;
     font-weight: 500;
-    @media screen and (max-width:480px) {
+    @media screen and (max-width: 480px) {
       font-size: 1rem;
     }
   }

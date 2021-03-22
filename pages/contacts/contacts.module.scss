@@ -6,6 +6,9 @@
   @media screen and (max-width: 1400px) and (min-width: 800px) {
     @include makeContainer(150px, 150px);
   }
+  @media screen and (max-width: 768px) and (min-width: 500px) {
+    @include makeContainer(20px, 20px);
+  }
   @media screen and (max-width: 480px) {
     @include makeContainer(10px, 10px);
     margin-top: 2rem;

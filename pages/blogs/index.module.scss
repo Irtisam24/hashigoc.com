@@ -10,6 +10,9 @@
     @include makeContainer(10px, 10px);
     margin-top: 2rem;
   }
+  @media screen and (max-width: 768px) and (min-width: 500px) {
+    @include makeContainer(50px, 50px);
+  }
   .mainHeading {
     @media screen and (max-width: 480px) {
       text-align: end;
@@ -42,11 +45,11 @@
       font-size: 1.2rem;
       color: white;
       transition: color ease-in-out 0.5;
-      
+
       &:hover {
         color: #daa520;
         text-decoration: none;
-    }
+      }
     }
   }
 }

@@ -6,6 +6,7 @@
     @include makeContainer(10px, 10px);
     margin-top: 2rem;
   }
+  
   .headingArc {
     @include useSfpro;
     color: white;

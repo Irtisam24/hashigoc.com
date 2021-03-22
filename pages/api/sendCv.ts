@@ -90,7 +90,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           try {
             let info = await transporter.sendMail({
               from: '"Hashi Goc Job Application" <info@hashigoc.com>', // sender address
-              to: "irtisam.d@gmail.com", // list of receivers
+              to: "hr@hashigoc.com", // list of receivers
               subject: "Job Application From Hashi Goc", // Subject line
               text: `<h2>Job Application</h2>
               <br></br>

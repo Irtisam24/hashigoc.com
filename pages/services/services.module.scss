@@ -6,6 +6,10 @@
     @include makeContainer(10px, 10px);
     margin-top: 1.5rem;
   }
+  @media screen and (max-width: 768px) {
+    @include makeContainer(20px, 20px);
+    margin-top: 2rem;
+  }
 
   .mainHeading {
     @include useSfpro;
