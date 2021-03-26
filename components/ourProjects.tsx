@@ -104,7 +104,7 @@ export const OurProjects: React.FC<housingOptionsProps> = () => {
       ref={housingRef}>
       {/* text section */}
       <Row>
-        <Col lg='3'>
+        <Col lg='4'>
           <div className={`d-flex flex-column marginRight w-100 widthDesktop`}>
             <h6 className={styles.headingHousing}>Our Projects</h6>
             <div
@@ -133,7 +133,7 @@ export const OurProjects: React.FC<housingOptionsProps> = () => {
         </Col>
 
         {/* slider section */}
-        <Col lg='9'>
+        <Col lg='8'>
           <Carousel fade>
             <Carousel.Item>
               <img

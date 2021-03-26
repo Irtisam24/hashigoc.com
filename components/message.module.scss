@@ -1,6 +1,6 @@
 @import "../styles/mixins";
 .archSection {
-  @include makeContainer(200px, 0px);
+  @include makeContainer(200px, 100px);
   margin-top: 2rem;
   @media only screen and (max-width: 480px) {
     @include makeContainer(0px, 0px);
@@ -18,10 +18,10 @@
   .image {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 60vh;
     border-radius: 5px;
     @media screen and (max-width: 1400px) and (min-width: 800px) {
-      height: auto;
+      height: 80vh;
     }
     @media screen and (max-width: 480px) {
       height: auto;
@@ -44,7 +44,7 @@
       @include addContentAfterOrBefore("Message");
       position: absolute;
       top: 90%;
-      left: 40%;
+      left: 30%;
       @include useGoldenText;
 
       @media screen and (max-width: 480px) {

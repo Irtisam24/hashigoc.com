@@ -18,8 +18,8 @@ export const Message: React.FC<messageProps> = () => {
       }
       ref={messageRef}>
       <Row>
-        <Col lg='4' sm='12'>
-          <div className='d-flex flex-column marginRight widthDesktop'>
+        <Col lg='6' sm='12'>
+          <div className='d-flex flex-column marginRight'>
             <h6 className={styles.headingArc}>Message</h6>
             <p className={`mt-5 mb-3 ${styles.whiteText}`}>Chairman's</p>
             <div className={styles.normalParagraph}>
@@ -44,7 +44,7 @@ export const Message: React.FC<messageProps> = () => {
             </div>
           </div>
         </Col>
-        <Col lg={{ span: "8" }}>
+        <Col lg={{ span: "6" }}>
           <Image src='/assets/images/Chairman.jpg' className={styles.image} />
         </Col>
       </Row>

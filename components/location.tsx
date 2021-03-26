@@ -20,12 +20,12 @@ export const Location: React.FC<locationProps> = () => {
       ref={locationRef}>
       {/* DeskTop View */}
       <Row className={styles.desktopView}>
-        <Col lg={{ span: "8" }}>
+        <Col lg={{ span: "6" }}>
           <Image src='/assets/images/Location.jpg' className={styles.image} />
         </Col>
 
-        <Col lg='4' sm='12'>
-          <div className='d-flex flex-column marginLeft widthDesktop'>
+        <Col lg='6' sm='12'>
+          <div className='d-flex flex-column marginLeft'>
             <h6 className={styles.headingInterior}>Location</h6>
             <p className={` ${styles.goldenText} ${styles.mainHeading}`}>
               Commitment
