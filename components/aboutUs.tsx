@@ -9,11 +9,16 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
   return (
     <section className={`${styles.aboutUs}`}>
       <div>
+        <div className={`d-flex justify-content-center mt-lg-3 `}>
+          <p className={`${styles.whiteText}`}>
+            About Us
+          </p>
+        </div>
         {/* section for desktop */}
         <Row className={styles.desktopView}>
-          <Col lg='3' sm='12' md='3'>
+          <Col lg='6' sm='12' md='6'>
             <div className={styles.paragraphSection}>
-              <p className='normalParagraph widthDesktop'>
+              <p className='normalParagraph '>
                 {" "}
                 Hashi Group of Companies is a real estate conglomerate
                 establishing mega projects in the prominent cities of Pakistan.
@@ -27,7 +32,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
                 an ecosystem that provides all the maintenance services at your
                 doorstep.
               </p>
-              <p className='normalParagraph widthDesktop'>
+              <p className='normalParagraph '>
                 {" "}
                 The Group portfolio extends to architectural services, real
                 estate and construction services, app development and digital
@@ -35,7 +40,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
               </p>
             </div>
           </Col>
-          <Col lg={{ span: "7", offset: "1" }} sm='12' md='7'>
+          <Col lg={{ span: "6" }} sm='12' md='6'>
             <div className={styles.paragraphSection}>
               <p className={styles.whiteText}>
                 The <br></br>
@@ -73,9 +78,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
             <div>
               <p className={styles.whiteText}>
                 The <br></br>
-                <span className={` ${styles.goldenText}`}>
-                  Game-Changer
-                </span>
+                <span className={` ${styles.goldenText}`}>Game-Changer</span>
                 <br></br>
                 <span>for</span>
                 <br></br>
