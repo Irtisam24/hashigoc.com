@@ -17,15 +17,14 @@ export const Message: React.FC<messageProps> = () => {
           : `${styles.archSection}`
       }
       ref={messageRef}>
-      <div className={`d-flex justify-content-center mb-3 `}>
-        <h6 className={styles.headingArc}>Message</h6>
+      <div className={`d-flex justify-content-center mb-lg-3 `}>
+        <p className={`${styles.whiteText}`}>
+          Chairman's <span className={`${styles.goldenText}`}>Message</span>
+        </p>
       </div>
       <Row>
         <Col lg='6' sm='12'>
-          <div className='d-flex flex-column marginRight'>
-            <p className={`mb-3 ${styles.whiteText}`}>
-              Chairman's <span className={`${styles.goldenText}`}>Message</span>
-            </p>
+          <div className='d-flex flex-column marginRight mt-lg-5'>
             <div className={styles.normalParagraph}>
               <p
                 className={` ${styles.whiteSmallTextFirstPart} normalParagraph`}>

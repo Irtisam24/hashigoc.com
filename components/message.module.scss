@@ -32,7 +32,7 @@
   .whiteText {
     @include usePlayful;
     line-height: 130%;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 150%;
     color: white;
     font-weight: 700;
@@ -41,30 +41,19 @@
       margin-inline: 10px;
     }
     position: relative;
-
-    @media screen and (max-width: 480px) {
-      &::after {
-        @include addContentAfterOrBefore("Message");
-        position: absolute;
-        top: 90%;
-        @include useGoldenText;
-        font-size: 3rem;
-        left: 40%;
-      }
-    }
   }
 
   .goldenText {
     @include usePlayful;
     line-height: 130%;
     letter-spacing: 150%;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #daa520;
   }
 
   .whiteSmallTextFirstPart {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
   @media screen and (max-width: 480px) {
     .normalParagraph {

@@ -29,7 +29,7 @@ export const Location: React.FC<locationProps> = () => {
         </Col>
 
         <Col lg='6' sm='12'>
-          <div className='d-flex flex-column marginLeft'>
+          <div className='d-flex flex-column marginLeft mt-lg-5'>
             <p className={` ${styles.goldenText}`}>
               <span className={`${styles.whiteText}`}>Convenience </span>
               Commitment <span className={`${styles.whiteText}`}>Clarity</span>

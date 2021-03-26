@@ -28,7 +28,7 @@ export const OurMission = () => {
         </Col>
 
         <Col lg='6' sm='12'>
-          <div className='d-flex flex-column marginLeft'>
+          <div className='d-flex flex-column marginLeft mt-lg-5'>
             <p className={` ${styles.whiteText} `}>
               <span className={`${styles.goldenText}`}>Ambition </span>Paving
               Way for Success

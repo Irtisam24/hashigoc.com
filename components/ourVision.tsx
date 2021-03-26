@@ -20,12 +20,12 @@ export const OurVision = () => {
       </div>
       <Row>
         <Col lg='6' sm='12'>
-          <div className='d-flex flex-column '>
+          <div className='d-flex flex-column mt-lg-5'>
             <p className={`mt-4 mb-1 ${styles.whiteText}`}>
               In <span className={`${styles.goldenText}`}>Harmony</span>
               <span className={`${styles.whiteText}`}> with the city</span>
             </p>
-            <div className={styles.normalParagraph}>
+            <div className={`${styles.normalParagraph}`}>
               {" "}
               <p
                 className={` ${styles.whiteSmallTextFirstPart} normalParagraph`}>
