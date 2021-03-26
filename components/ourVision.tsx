@@ -16,8 +16,8 @@ export const OurVision = () => {
       }
       ref={refArc}>
       <Row>
-        <Col lg='4' sm='12'>
-          <div className='d-flex flex-column marginRight widthDesktop'>
+        <Col lg='6' sm='12'>
+          <div className='d-flex flex-column marginRight '>
             <h6 className={styles.headingArc}>Our Vision</h6>
             <p className={`mt-5 mb-3 ${styles.whiteText}`}>
               In <span className={`${styles.goldenText}`}>Harmony</span>
@@ -44,7 +44,7 @@ export const OurVision = () => {
             </div>
           </div>
         </Col>
-        <Col xl={{ span: "8" }} lg='12' md='12'>
+        <Col xl={{ span: "6" }} lg='12' md='12'>
           <Image src='/assets/images/ourVision.jpg' className={styles.image} />
         </Col>
       </Row>
