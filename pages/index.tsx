@@ -23,11 +23,17 @@ export default function Home() {
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-XG0V01XG65'
         />
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-XG0V01XG65');
-        </script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XG0V01XG65');
+        `,
+          }}
+        />
       </Head>
       <section>
         <NavBar isFixed={true} />
