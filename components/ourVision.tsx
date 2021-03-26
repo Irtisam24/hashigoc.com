@@ -21,10 +21,9 @@ export const OurVision = () => {
       <Row>
         <Col lg='6' sm='12'>
           <div className='d-flex flex-column '>
-            <p className={`mt-4 mb-3 ${styles.whiteText}`}>
+            <p className={`mt-4 mb-1 ${styles.whiteText}`}>
               In <span className={`${styles.goldenText}`}>Harmony</span>
-              <br></br>
-              <span className={`${styles.with} ml-5`}>with</span>
+              <span className={`${styles.whiteText}`}> with the city</span>
             </p>
             <div className={styles.normalParagraph}>
               {" "}
@@ -46,7 +45,7 @@ export const OurVision = () => {
             </div>
           </div>
         </Col>
-        <Col xl={{ span: "6" }}  md='12'>
+        <Col xl={{ span: "6" }} md='12'>
           <Image src='/assets/images/ourVision.jpg' className={styles.image} />
         </Col>
       </Row>
