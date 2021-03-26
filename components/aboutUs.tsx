@@ -16,7 +16,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
         </div>
         {/* section for desktop */}
         <Row className={styles.desktopView}>
-          <Col lg='6' sm='12' md='6'>
+          <Col lg='5' sm='12' md='6'>
             <div className={styles.paragraphSection}>
               <p className='normalParagraph '>
                 {" "}
@@ -40,7 +40,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
               </p>
             </div>
           </Col>
-          <Col lg={{ span: "6" }} sm='12' md='6'>
+          <Col lg={{ span: "6" ,offset:"1"}} sm='12' md='7'>
             <div className={styles.paragraphSection}>
               <p className={styles.whiteText}>
                 The <br></br>
@@ -58,12 +58,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
               </p>
             </div>
           </Col>
-          <Col lg='1' sm='12' md='1'>
-            <p
-              className={`${styles.paragraphSection} ${styles.sectionHeading}`}>
-              About
-            </p>
-          </Col>
+        
         </Row>
         {/* xxxx Section for Desktop End xxxxx  */}
         {/* Section for mobile view start */}
