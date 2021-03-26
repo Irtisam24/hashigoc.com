@@ -9,10 +9,9 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
   return (
     <section className={`${styles.aboutUs}`}>
       <div>
-        <div className={`d-flex justify-content-center mt-lg-3 `}>
-          <p className={`${styles.whiteText}`}>
-            About Us
-          </p>
+        <div
+          className={`d-flex justify-content-center mt-lg-3 ${styles.desktopView}`}>
+          <p className={`${styles.whiteText}`}>About Us</p>
         </div>
         {/* section for desktop */}
         <Row className={styles.desktopView}>
@@ -40,7 +39,7 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
               </p>
             </div>
           </Col>
-          <Col lg={{ span: "6" ,offset:"1"}} sm='12' md='7'>
+          <Col lg={{ span: "6", offset: "1" }} sm='12' md='7'>
             <div className={styles.paragraphSection}>
               <p className={styles.whiteText}>
                 The <br></br>
@@ -58,7 +57,6 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
               </p>
             </div>
           </Col>
-        
         </Row>
         {/* xxxx Section for Desktop End xxxxx  */}
         {/* Section for mobile view start */}
