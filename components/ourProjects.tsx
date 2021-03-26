@@ -103,10 +103,12 @@ export const OurProjects: React.FC<housingOptionsProps> = () => {
       }
       ref={housingRef}>
       {/* text section */}
+      <div className={`d-flex justify-content-center mb-3`}>
+        <h6 className={styles.headingHousing}>Our Projects</h6>
+      </div>
       <Row>
         <Col lg='4'>
           <div className={`d-flex flex-column marginRight w-100 widthDesktop`}>
-            <h6 className={styles.headingHousing}>Our Projects</h6>
             <div
               className={`d-flex ml-3 mt-5  justify-content-around ${styles.sectionIndicatorActive}`}>
               <p

@@ -11,7 +11,7 @@
   .headingArc {
     @include useSfpro;
     color: white;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     @media screen and (max-width: 480px) {
       font-size: 1rem;

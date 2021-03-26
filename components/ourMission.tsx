@@ -18,6 +18,10 @@ export const OurMission = () => {
       }
       ref={interiorRef}>
       {/* Desktop View */}
+      <div
+        className={`d-flex justify-content-center mb-3 ${styles.desktopView}`}>
+        <h6 className={styles.headingInterior}>Our Mission</h6>
+      </div>
       <Row className={styles.desktopView}>
         <Col lg={{ span: "6" }}>
           <Image src='/assets/images/ourMission.jpg' className={styles.image} />
@@ -25,9 +29,9 @@ export const OurMission = () => {
 
         <Col lg='6' sm='12'>
           <div className='d-flex flex-column marginLeft'>
-            <h6 className={styles.headingInterior}>Our Mission</h6>
-            <p className={` ${styles.whiteText} ${styles.mainHeading}`}>
-              Paving Way
+            <p className={` ${styles.whiteText} `}>
+              <span className={`${styles.goldenText}`}>Ambition </span>Paving
+              Way for Success
             </p>
             <p className={` ${styles.whiteSmallTextFirstPart} normalParagraph`}>
               Experiences in multiple industries of our founder and senior team

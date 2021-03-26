@@ -20,13 +20,9 @@
   }
   .headingInterior {
     @include useSfpro;
-    margin-left: auto;
     color: white;
-    font-size: 1.2rem;
-    @media screen and (max-width: 1400px) and (min-width: 800px) {
-      margin-left: auto;
-      margin-right: 20px;
-    }
+    font-size: 3rem;
+    font-weight: bold;
     @media screen and (max-width: 480px) {
       margin-left: auto;
       font-size: 1rem;
@@ -81,7 +77,7 @@
   .whiteText {
     @include usePlayful;
     line-height: 130%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 150%;
     color: white;
     font-weight: 700;
@@ -91,7 +87,7 @@
     @include usePlayful;
     line-height: 130%;
     letter-spacing: 150%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #daa520;
     @media screen and (max-width: 480px) {
@@ -101,7 +97,7 @@
   }
 
   .whiteSmallTextFirstPart {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
   @media screen and (max-width: 480px) {
     .normalParagraph {

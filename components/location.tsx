@@ -19,6 +19,10 @@ export const Location: React.FC<locationProps> = () => {
       }
       ref={locationRef}>
       {/* DeskTop View */}
+      <div
+        className={`d-flex justify-content-center mb-3 ${styles.desktopView}`}>
+        <h6 className={styles.headingInterior}>Location</h6>
+      </div>
       <Row className={styles.desktopView}>
         <Col lg={{ span: "6" }}>
           <Image src='/assets/images/Location.jpg' className={styles.image} />
@@ -26,9 +30,9 @@ export const Location: React.FC<locationProps> = () => {
 
         <Col lg='6' sm='12'>
           <div className='d-flex flex-column marginLeft'>
-            <h6 className={styles.headingInterior}>Location</h6>
-            <p className={` ${styles.goldenText} ${styles.mainHeading}`}>
-              Commitment
+            <p className={` ${styles.goldenText}`}>
+              <span className={`${styles.whiteText}`}>Convenience </span>
+              Commitment <span className={`${styles.whiteText}`}>Clarity</span>
             </p>
             <p className={` ${styles.whiteSmallTextFirstPart} normalParagraph`}>
               Both of our offices are located right on the cusp of Bahria Town
