@@ -40,18 +40,16 @@ export const AboutUs: React.FC<aboutUsProps> = () => {
             </div>
           </Col>
           <Col lg={{ span: "6", offset: "1" }} sm='12' md='7'>
-            <div className={styles.paragraphSection}>
+            <div className={`${styles.paragraphSection} ${styles.mainHeading}`}>
               <p className={styles.whiteText}>
                 The <br></br>
                 <span className={`ml-lg-5 ${styles.goldenText}`}>
                   Game-Changer
                 </span>
                 <br></br>
-                <span style={{ marginLeft: "12vw" }}>for</span>
+                <span className={`${styles.for}`}>for</span>
                 <br></br>
-                <span
-                  className={`${styles.goldenText}`}
-                  style={{ marginLeft: "14vw" }}>
+                <span className={`${styles.goldenText} ${styles.life}`}>
                   Life Aesthetics
                 </span>
               </p>

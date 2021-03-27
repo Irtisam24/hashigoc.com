@@ -65,9 +65,9 @@
   .whiteText {
     @include usePlayful;
     line-height: 130%;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: white;
-    font-weight: 700;
+    font-weight: bold;
     @media screen and (max-width: 1400px) and (min-width: 800px) {
       font-size: 3rem;
     }
@@ -81,7 +81,7 @@
   .goldenText {
     @include usePlayful;
     line-height: 130%;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #daa520;
     @media screen and (max-width: 1400px) and (min-width: 800px) {
@@ -92,6 +92,17 @@
     }
     @media screen and (max-width: 480px) {
       font-size: 2.5rem;
+    }
+  }
+  .mainHeading {
+    position: relative;
+    .for {
+      position: absolute;
+      left: 25%;
+    }
+    .life {
+      position: absolute;
+      left: 30%;
     }
   }
   .sectionHeading {

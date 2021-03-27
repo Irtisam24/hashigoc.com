@@ -11,9 +11,23 @@ interface housingOptionsProps {}
 
 export const OurProjects: React.FC<housingOptionsProps> = () => {
   const [activeSection, setActiveSection] = React.useState<number>(1);
+  const [imageIndex, setImageIndex] = React.useState<number>(0);
 
   const housingRef = useRef();
   const isVisible = useOnScreen(housingRef);
+  const changeSectionAndImageHashMall = () => {
+    setActiveSection(1);
+    setImageIndex(0);
+  };
+
+  const changeSectionAndImageHashResidency = () => {
+    setActiveSection(2);
+    setImageIndex(2);
+  };
+
+  const handleSelect = (selectedIndex, e) => {
+    setImageIndex(selectedIndex);
+  };
 
   const renderSection = () => {
     if (activeSection === 1) {
@@ -117,7 +131,7 @@ export const OurProjects: React.FC<housingOptionsProps> = () => {
                     ? `${styles.activeSection}`
                     : `${styles.inActiveSection}`
                 }
-                onClick={() => setActiveSection(1)}>
+                onClick={() => changeSectionAndImageHashMall()}>
                 The Hash Mall
               </p>
               <p
@@ -126,7 +140,7 @@ export const OurProjects: React.FC<housingOptionsProps> = () => {
                     ? `${styles.activeSection}`
                     : `${styles.inActiveSection}`
                 }
-                onClick={() => setActiveSection(2)}>
+                onClick={() => changeSectionAndImageHashResidency()}>
                 Hash Residency
               </p>
             </div>
@@ -136,7 +150,7 @@ export const OurProjects: React.FC<housingOptionsProps> = () => {
 
         {/* slider section */}
         <Col lg='8'>
-          <Carousel fade>
+          <Carousel fade activeIndex={imageIndex} onSelect={handleSelect}>
             <Carousel.Item>
               <img
                 className={`${styles.sliderImage}`}

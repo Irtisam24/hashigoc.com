@@ -9,6 +9,7 @@
     @include useSfpro;
     color: white;
     font-size: 3.5rem;
+    letter-spacing: 5px;
     font-weight: bold;
     @media screen and (max-width: 480px) {
       font-size: 1rem;
@@ -33,7 +34,7 @@
     @include usePlayful;
     line-height: 130%;
     font-size: 3rem;
-    letter-spacing: 150%;
+    letter-spacing: 3px;
     color: white;
     font-weight: 700;
     @media screen and (max-width: 480px) {
@@ -46,7 +47,7 @@
   .goldenText {
     @include usePlayful;
     line-height: 130%;
-    letter-spacing: 150%;
+    letter-spacing: 3px;
     font-size: 3rem;
     font-weight: 700;
     color: #daa520;
