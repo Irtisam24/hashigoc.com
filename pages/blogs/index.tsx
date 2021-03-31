@@ -41,7 +41,7 @@ export default function Blogs({ data }) {
                   sm='12'
                   className={`${styles.singleBlogItem}`}
                   key={blog.blog_id}>
-                  <Link href={`/blogs/${blog.blog_id}`}>
+                  <Link href={`/blogs/${blog.slug}`}>
                     <Image
                       src={`/assets/images/${blog.blog_image}`}
                       className={`${styles.blogImage}`}
@@ -50,10 +50,10 @@ export default function Blogs({ data }) {
                   <p className={`${styles.createdAt}`}>
                     {blog.created_at.slice(0, 10)}
                   </p>
-                  <Link href={`/blogs/${blog.blog_id}`}>
+                  <Link href={`/blogs/${blog.slug}`}>
                     <p className={`${styles.blogTitle}`}>{blog.blog_title}</p>
                   </Link>
-                  <Link href={`/blogs/${blog.blog_id}`}>
+                  <Link href={`/blogs/${blog.slug}`}>
                     <a className={`${styles.viewMore}`}>View More</a>
                   </Link>
                 </Col>

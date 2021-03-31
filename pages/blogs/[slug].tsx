@@ -45,11 +45,11 @@ export default function SingleBlog({ data }) {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: "1" } },
-      { params: { slug: "2" } },
-      { params: { slug: "3" } },
-      { params: { slug: "4" } },
-      { params: { slug: "5" } },
+      { params: { slug: "live-chat-for-real-estate-businesses" } },
+      { params: { slug: "pakistan-independence-day" } },
+      { params: { slug: "kamyab-jawan-program" } },
+      { params: { slug: "pakistan-defense-day" } },
+      { params: { slug: "hashi-group-of-companies" } },
     ],
     fallback: false,
   };
@@ -57,10 +57,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const id = parseInt(slug);
   const { db } = await connectToDatabase();
 
-  const data = await db.collection("blogs").find({ blog_id: id }).toArray();
+  const data = await db.collection("blogs").find({ slug: slug }).toArray();
 
   if (!data) {
     return {
