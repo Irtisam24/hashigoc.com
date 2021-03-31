@@ -5,7 +5,6 @@ import { Col, Image, Row } from "react-bootstrap";
 import { Footer } from "../../components/footer";
 import { NavBar } from "../../components/navbar";
 
-
 // custom css
 import styles from "./index.module.scss";
 import { connectToDatabase } from "../../functions/mongodb";
@@ -42,14 +41,18 @@ export default function Blogs({ data }) {
                   sm='12'
                   className={`${styles.singleBlogItem}`}
                   key={blog.blog_id}>
-                  <Image
-                    src={`/assets/images/${blog.blog_image}`}
-                    className={`${styles.blogImage}`}
-                  />
+                  <Link href={`/blogs/${blog.blog_id}`}>
+                    <Image
+                      src={`/assets/images/${blog.blog_image}`}
+                      className={`${styles.blogImage}`}
+                    />
+                  </Link>
                   <p className={`${styles.createdAt}`}>
                     {blog.created_at.slice(0, 10)}
                   </p>
-                  <p className={`${styles.blogTitle}`}>{blog.blog_title}</p>
+                  <Link href={`/blogs/${blog.blog_id}`}>
+                    <p className={`${styles.blogTitle}`}>{blog.blog_title}</p>
+                  </Link>
                   <Link href={`/blogs/${blog.blog_id}`}>
                     <a className={`${styles.viewMore}`}>View More</a>
                   </Link>
