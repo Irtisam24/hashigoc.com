@@ -63,6 +63,7 @@ export default function Blogs({ data }) {
         </div>
       </section>
       <section className={`${styles.footerSection}`}>
+      {/* footer */}
         <Footer />
       </section>
     </>
