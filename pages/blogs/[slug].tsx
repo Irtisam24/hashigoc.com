@@ -37,30 +37,29 @@ export default function SingleBlog({ data }) {
         <div className={`${styles.bodySection}`}>
           <div dangerouslySetInnerHTML={createMarkUp(data.blog_content)} />
         </div>
-        <div>
-          <DisqusComments post={data} />
-        </div>
+        <DisqusComments post={data} />
+        <div></div>
       </section>
       <Footer />
     </>
   );
 }
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [
-//       { params: { slug: "live-chat-for-real-estate-businesses" } },
-//       { params: { slug: "pakistan-independence-day" } },
-//       { params: { slug: "kamyab-jawan-program" } },
-//       { params: { slug: "pakistan-defense-day" } },
-//       { params: { slug: "hashi-group-of-companies" } },
-//       { params: { slug: "Property-Management-Services" } },
-//     ],
-//     fallback: false,
-//   };
-// }
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: "live-chat-for-real-estate-businesses" } },
+      { params: { slug: "pakistan-independence-day" } },
+      { params: { slug: "kamyab-jawan-program" } },
+      { params: { slug: "pakistan-defense-day" } },
+      { params: { slug: "hashi-group-of-companies" } },
+      { params: { slug: "Property-Management-Services" } },
+    ],
+    fallback: false,
+  };
+}
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   const { slug } = params;
   const { db } = await connectToDatabase();
 
