@@ -38,8 +38,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         subject,
       }: reqData = fields;
       const { cv } = files;
-      console.log(cv);
-
       try {
         const verifyToken = await Axios.post(
           `https://www.google.com/recaptcha/api/siteverify?secret=6Lfo238aAAAAAIWN1zLeyM5g1JDMDSHDI3f_27Df&response=${token}`
@@ -128,7 +126,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
               <hr></hr>`, // html body
             });
             if (info.messageId) {
-              console.log(info);
               return res.status(200).send("Thank you for reaching out to us!");
             } else {
               return res
@@ -136,7 +133,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                 .send("Something went wrong please try again later!");
             }
           } catch (error) {
-            console.log(error);
             return res
               .status(401)
               .send("Something went wrong please try again later!");
