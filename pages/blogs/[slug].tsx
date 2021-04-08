@@ -8,6 +8,7 @@ import Head from "next/head";
 //
 import styles from "./slug.module.scss";
 import { connectToDatabase } from "../../functions/mongodb";
+import DisqusComments from "./DisqusComments";
 
 const createMarkUp = (content) => {
   return { __html: content };
@@ -37,6 +38,7 @@ export default function SingleBlog({ data }) {
           <div dangerouslySetInnerHTML={createMarkUp(data.blog_content)} />
         </div>
       </section>
+      <DisqusComments post={data} />
       <Footer />
     </>
   );
@@ -44,14 +46,13 @@ export default function SingleBlog({ data }) {
 
 export async function getStaticPaths() {
   return {
-    
     paths: [
       { params: { slug: "live-chat-for-real-estate-businesses" } },
       { params: { slug: "pakistan-independence-day" } },
       { params: { slug: "kamyab-jawan-program" } },
       { params: { slug: "pakistan-defense-day" } },
       { params: { slug: "hashi-group-of-companies" } },
-      { params: { slug: "Property-Management-Services" } }
+      { params: { slug: "Property-Management-Services" } },
     ],
     fallback: false,
   };
