@@ -1,9 +1,7 @@
 import { DiscussionEmbed } from "disqus-react";
 const DisqusComments = ({ post }) => {
-  console.log("====================================");
-  console.log(post);
-  console.log("====================================");
-  const disqusShortname = "hashi-goc-blog-comments";
+  
+  const disqusShortname = "hashigoc";
   const disqusConfig = {
     url: `https://www.hashigoc.com/blogs/${post.slug}/`,
     identifier: post.slug,

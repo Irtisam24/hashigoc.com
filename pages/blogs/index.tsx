@@ -68,7 +68,7 @@ export default function Blogs({ data }) {
     </>
   );
 }
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { db } = await connectToDatabase();
 
   const data = await db

@@ -44,21 +44,21 @@ export default function SingleBlog({ data }) {
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { slug: "live-chat-for-real-estate-businesses" } },
-      { params: { slug: "pakistan-independence-day" } },
-      { params: { slug: "kamyab-jawan-program" } },
-      { params: { slug: "pakistan-defense-day" } },
-      { params: { slug: "hashi-group-of-companies" } },
-      { params: { slug: "Property-Management-Services" } },
-    ],
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { slug: "live-chat-for-real-estate-businesses" } },
+//       { params: { slug: "pakistan-independence-day" } },
+//       { params: { slug: "kamyab-jawan-program" } },
+//       { params: { slug: "pakistan-defense-day" } },
+//       { params: { slug: "hashi-group-of-companies" } },
+//       { params: { slug: "Property-Management-Services" } },
+//     ],
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { slug } = params;
   const { db } = await connectToDatabase();
 
