@@ -37,8 +37,10 @@ export default function SingleBlog({ data }) {
         <div className={`${styles.bodySection}`}>
           <div dangerouslySetInnerHTML={createMarkUp(data.blog_content)} />
         </div>
+        <div>
+          <DisqusComments post={data} />
+        </div>
       </section>
-      <DisqusComments post={data} />
       <Footer />
     </>
   );
