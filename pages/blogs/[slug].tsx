@@ -44,6 +44,7 @@ export default function SingleBlog({ data }) {
 
 export async function getStaticPaths() {
   return {
+    
     paths: [
       { params: { slug: "live-chat-for-real-estate-businesses" } },
       { params: { slug: "pakistan-independence-day" } },
@@ -51,7 +52,7 @@ export async function getStaticPaths() {
       { params: { slug: "pakistan-defense-day" } },
       { params: { slug: "hashi-group-of-companies" } },
       { params: { slug: "real-estate-trends" } },
-      
+
     ],
     fallback: false,
   };
