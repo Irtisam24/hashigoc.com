@@ -50,8 +50,7 @@ export async function getStaticPaths() {
       { params: { slug: "kamyab-jawan-program" } },
       { params: { slug: "pakistan-defense-day" } },
       { params: { slug: "hashi-group-of-companies" } },
-      { params: { slug: "real-estate-trends" } },
-
+      { params: { slug: "Property-Management-Services" } }
     ],
     fallback: false,
   };
