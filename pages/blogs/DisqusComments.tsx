@@ -13,5 +13,6 @@ const DisqusComments = ({ post }) => {
       </div>
     );
   }
+  return null;
 };
 export default DisqusComments;
