@@ -40,7 +40,7 @@ export default function SingleBlog({ data }) {
             {data.created_at.slice(0, 10)}
           </small>
         </h3>
-        <Image src={`/assets/images/${data.blog_image}`} fluid />
+        <Image src={`/assets/images/${data.blog_image}`} fluid className='w-100' />
         {/* <Image
           src={`/assets/images/${data.blog_image}`}
           layout='responsive'
