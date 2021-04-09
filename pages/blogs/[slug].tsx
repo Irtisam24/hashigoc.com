@@ -36,10 +36,10 @@ export default function SingleBlog({ data }) {
           property='og:url'
           content={`https://www.hashigoc.com/blogs/${data.slug}/`}
         />
-        <meta property='og:type' content='blog' />
+        <meta property='og:type' content='blog post' />
         <meta
           property='og:description'
-          content={data.blog_content.replace(/<[^>]*>?/gm, "").slice(0,50)}
+          content={data.blog_content.replace(/<[^>]*>?/gm, "").slice(0, 50)}
         />
         <meta
           property='og:image'
