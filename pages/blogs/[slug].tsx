@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from "react-bootstrap/Image";
 
 import { Footer } from "../../components/footer";
 import { NavBar } from "../../components/navbar";
@@ -39,12 +40,13 @@ export default function SingleBlog({ data }) {
             {data.created_at.slice(0, 10)}
           </small>
         </h3>
-        <Image
+        <Image src={`/assets/images/${data.blog_image}`} fluid />
+        {/* <Image
           src={`/assets/images/${data.blog_image}`}
           layout='responsive'
           width={100}
           height={40}
-        />
+        /> */}
         <div className={`${styles.bodySection}`}>
           <div dangerouslySetInnerHTML={createMarkUp(data.blog_content)} />
         </div>
