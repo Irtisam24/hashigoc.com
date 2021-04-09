@@ -45,6 +45,10 @@ export default function SingleBlog({ data }) {
           property='og:image'
           content={`/assets/images/${data.blog_image}`}
         />
+        <meta
+          property='og:image:alt'
+          content={`/assets/images/${data.blog_image}`}
+        />
       </Head>
       <NavBar isFixed={false} />
       <section className={`${styles.mainContainer}`}>
