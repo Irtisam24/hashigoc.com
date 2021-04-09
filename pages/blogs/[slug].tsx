@@ -10,7 +10,7 @@ import styles from "./slug.module.scss";
 import { connectToDatabase } from "../../functions/mongodb";
 import DisqusComments from "./DisqusComments";
 import { useRouter } from "next/router";
-import { Loader } from "react-full-page-loader-overlay";
+import { Spinner } from "react-bootstrap";
 
 const createMarkUp = (content) => {
   return { __html: content };
@@ -20,7 +20,11 @@ export default function SingleBlog({ data }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <Loader show={true} design={2} />;
+    return (
+      <div className={styles.loader}>
+        <Spinner animation='grow' variant='warning' />
+      </div>
+    );
   }
   return (
     <>
