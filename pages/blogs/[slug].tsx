@@ -31,6 +31,8 @@ export default function SingleBlog({ data }) {
     <>
       <Head>
         <title>{data.blog_title}</title>
+        <meta property="og:image" content={`/assets/images/${data.blog_image}`} />
+
       </Head>
       <NavBar isFixed={false} />
       <section className={`${styles.mainContainer}`}>
