@@ -54,7 +54,7 @@ export default function SingleBlog({ data }) {
         />
         <meta
           property='og:image:alt'
-          content={`/assets/images/${data.blog_image}`}
+          content={`https://www.hashigoc.com/assets/images/${data.blog_image}`}
           key='ogimgalt'
         />
       </Head>
