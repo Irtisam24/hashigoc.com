@@ -9,12 +9,19 @@ import Head from "next/head";
 import styles from "./slug.module.scss";
 import { connectToDatabase } from "../../functions/mongodb";
 import DisqusComments from "./DisqusComments";
+import { useRouter } from "next/router";
+import { Loader } from "react-full-page-loader-overlay";
 
 const createMarkUp = (content) => {
   return { __html: content };
 };
 
 export default function SingleBlog({ data }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader show={true} design={2} />;
+  }
   return (
     <>
       <Head>
@@ -46,17 +53,13 @@ export default function SingleBlog({ data }) {
 }
 
 export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { slug: "live-chat-for-real-estate-businesses" } },
-      { params: { slug: "pakistan-independence-day" } },
-      { params: { slug: "kamyab-jawan-program" } },
-      { params: { slug: "pakistan-defense-day" } },
-      { params: { slug: "hashi-group-of-companies" } },
-      { params: { slug: "Property-Management-Services" } },
-    ],
-    fallback: false,
-  };
+  const { db } = await connectToDatabase();
+
+  const data = await db.collection("blogs").find({}).toArray();
+  const paths = data.map((path) => ({
+    params: { slug: path.slug },
+  }));
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
@@ -77,6 +80,7 @@ export async function getStaticProps({ params }) {
       props: {
         data: JSON.parse(JSON.stringify(data[0])),
       },
+      revalidate: 1,
     };
   }
 }
