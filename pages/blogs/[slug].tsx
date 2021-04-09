@@ -31,8 +31,20 @@ export default function SingleBlog({ data }) {
     <>
       <Head>
         <title>{data.blog_title}</title>
-        <meta property="og:image" content={`/assets/images/${data.blog_image}`} />
-
+        <meta property='og:title' content={`${data.blog_title}`} />
+        <meta
+          property='og:url'
+          content={`https://www.hashigoc.com/blogs/${data.slug}/`}
+        />
+        <meta property='og:type' content='blog' />
+        <meta
+          property='og:description'
+          content={data.blog_content.replace(/<[^>]*>?/gm, "").slice(0,50)}
+        />
+        <meta
+          property='og:image'
+          content={`/assets/images/${data.blog_image}`}
+        />
       </Head>
       <NavBar isFixed={false} />
       <section className={`${styles.mainContainer}`}>
@@ -42,7 +54,11 @@ export default function SingleBlog({ data }) {
             {data.created_at.slice(0, 10)}
           </small>
         </h3>
-        <Image src={`/assets/images/${data.blog_image}`} fluid className='w-100' />
+        <Image
+          src={`/assets/images/${data.blog_image}`}
+          fluid
+          className='w-100'
+        />
         {/* <Image
           src={`/assets/images/${data.blog_image}`}
           layout='responsive'
