@@ -31,23 +31,31 @@ export default function SingleBlog({ data }) {
     <>
       <Head>
         <title>{data.blog_title}</title>
-        <meta property='og:title' content={`${data.blog_title}`} />
+        <meta
+          property='og:title'
+          content={`${data.blog_title}`}
+          key='ogtitle'
+        />
         <meta
           property='og:url'
           content={`https://www.hashigoc.com/blogs/${data.slug}/`}
+          key='ogurl'
         />
-        <meta property='og:type' content='blog post' />
+        <meta property='og:type' content='website' />
         <meta
           property='og:description'
           content={data.blog_content.replace(/<[^>]*>?/gm, "").slice(0, 50)}
+          key='ogdesc'
         />
         <meta
           property='og:image'
           content={`/assets/images/${data.blog_image}`}
+          key='ogimg'
         />
         <meta
           property='og:image:alt'
           content={`/assets/images/${data.blog_image}`}
+          key='ogimgalt'
         />
       </Head>
       <NavBar isFixed={false} />
