@@ -9,7 +9,6 @@ import Head from "next/head";
 //
 import styles from "./slug.module.scss";
 import { connectToDatabase } from "../../functions/mongodb";
-import DisqusComments from "./DisqusComments";
 import { useRouter } from "next/router";
 import { Spinner } from "react-bootstrap";
 
@@ -80,7 +79,6 @@ export default function SingleBlog({ data }) {
         <div className={`${styles.bodySection}`}>
           <div dangerouslySetInnerHTML={createMarkUp(data.blog_content)} />
         </div>
-        <DisqusComments post={data} />
         <div></div>
       </section>
       <Footer />
