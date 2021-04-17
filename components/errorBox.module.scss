@@ -1,9 +1,0 @@
-@import "../styles/mixins";
-.errorBox {
-  background-color: rgba($color: red, $alpha: 0.5);
-  width: max-content;
-  color: white;
-  @include useSfpro;
-  font-size: 0.9rem;
-  height: auto;
-}
