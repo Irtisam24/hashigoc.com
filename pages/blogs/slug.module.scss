@@ -1,5 +1,9 @@
 @import "../../styles/mixins";
 
+ol {
+  color: white;
+}
+
 .mainContainer {
   @include makeContainer(200px, 200px);
   margin-top: 5rem;
