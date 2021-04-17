@@ -1,0 +1,55 @@
+@import "../styles/mixins";
+.navBar {
+  @include useSfpro();
+
+  background-color: rgba($color: #000000, $alpha: 0.3) !important;
+  @media screen and (max-width: 480px) {
+    background-color: rgba($color: #000000, $alpha: 0.9) !important;
+  }
+  .navbarBrand {
+    color: white !important;
+    font-size: 1.5rem;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    @media screen and (max-width: 480px) {
+      transform: none;
+      position: unset;
+      left: unset;
+    }
+  }
+  .navBarButton {
+    border: none !important;
+    color: white !important;
+  }
+  .active {
+    color: #daa520 !important;
+  }
+  .navLink {
+    color: white !important;
+    font-size: 1rem;
+    @include useSfpro;
+    transition: color ease 0.5s;
+    @media screen and (max-width: 480px) {
+      font-size: 2.3rem;
+      @include usePlayful;
+      font-weight: 400;
+      margin: auto auto;
+    }
+    &:hover,
+    &:focus {
+      color: #daa520 !important;
+      @media screen and (max-width: 480px) {
+        color: #daa520 !important;
+        border-bottom: 2px #daa520 solid;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .navbarCollapseSectionMobile {
+      height: 100vh !important;
+      width: 100vw;
+      margin-top: 4rem;
+    }
+  }
+}

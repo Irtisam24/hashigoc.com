@@ -1,0 +1,64 @@
+@import "../styles/mixins";
+.archSection {
+  @include makeContainer(200px, 100px);
+  margin-top: 2rem;
+  @media only screen and (max-width: 480px) {
+    @include makeContainer(0px, 0px);
+  }
+  .headingArc {
+    @include useSfpro;
+    color: white;
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    @media screen and (max-width: 480px) {
+      font-size: 1rem;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    @media screen and (max-width: 1400px) and (min-width: 800px) {
+      height: 80vh;
+    }
+    @media screen and (max-width: 480px) {
+      height: auto;
+      border-radius: 2px;
+    }
+  }
+  .whiteText {
+    @include usePlayful;
+    line-height: 130%;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: 700;
+    @media screen and (max-width: 480px) {
+      font-size: 3rem;
+      margin-inline: 10px;
+    }
+    position: relative;
+  }
+
+  .goldenText {
+    @include usePlayful;
+    line-height: 130%;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #daa520;
+  }
+
+  .whiteSmallTextFirstPart {
+    margin-top: 2rem;
+  }
+  @media screen and (max-width: 480px) {
+    .normalParagraph {
+      margin-inline: 10px;
+    }
+  }
+}
