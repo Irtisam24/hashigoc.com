@@ -1,9 +1,5 @@
 @import "../../styles/mixins";
 
-ol {
-  color: white;
-}
-
 .mainContainer {
   @include makeContainer(200px, 200px);
   margin-top: 5rem;
@@ -39,6 +35,10 @@ ol {
         color: white;
         @include useSfpro;
       }
+    }
+
+    ol {
+      color: white;
     }
     h3,
     h1,
