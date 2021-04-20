@@ -59,12 +59,12 @@ export default function SingleBlog({ data }) {
       </Head>
       <NavBar isFixed={false} />
       <section className={`${styles.mainContainer}`}>
-        <h3 className={`${styles.title}`}>
+        <h1 className={`${styles.title}`}>
           {data.blog_title} <br></br>
           <small className={`${styles.createdAt}`}>
             {data.created_at.slice(0, 10)}
           </small>
-        </h3>
+        </h1>
         <Image
           src={`/assets/images/${data.blog_image}`}
           fluid
