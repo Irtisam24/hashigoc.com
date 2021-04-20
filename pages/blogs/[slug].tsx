@@ -65,6 +65,7 @@ export default function SingleBlog({ data }) {
             {data.created_at.slice(0, 10)}
           </small>
         </h1>
+        
         <Image
           src={`/assets/images/${data.blog_image}`}
           fluid
