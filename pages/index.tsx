@@ -10,6 +10,7 @@ import { Location } from "../components/location";
 import { Message } from "../components/message";
 import { NavBar } from "../components/navbar";
 
+
 export default function Home() {
   return (
     <>
