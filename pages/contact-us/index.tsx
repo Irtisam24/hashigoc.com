@@ -117,7 +117,7 @@ export default function Contacts() {
           <p className={`normalParagraph ${styles.mainHeading}`}>Contact Us</p>
 
           <Row>
-            <Col lg='3' md='4' sm='12'>
+            <Col lg='3' sm='12'>
               <p className={`${styles.formHeading}`}>Let's get</p>
               <form className={`mt-lg-5`}>
                 <Row>
