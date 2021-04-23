@@ -106,7 +106,7 @@ const renderNavbar = (isFixed: boolean) => {
                   Blogs
                 </Nav.Link>
               </Link>
-              <Link href='/contacts'>
+              <Link href='/contact-us'>
                 <Nav.Link className={`${styles.navLink} mx-lg-4`} href='#link'>
                   Contact Us
                 </Nav.Link>
