@@ -24,7 +24,7 @@ export const OurMission = () => {
       </div>
       <Row className={styles.desktopView}>
         <Col lg={{ span: "6" }}>
-          <Image src='/assets/images/ourMission.jpg' className={styles.image} />
+          <Image src='/assets/images/ourMission.jpg' className={styles.image} alt='Our Mission'/>
         </Col>
 
         <Col lg='6' sm='12'>
@@ -75,7 +75,7 @@ export const OurMission = () => {
           </div>
         </Col>
         <Col sm='12'>
-          <Image src='/assets/images/ourMission.jpg' className={styles.image} />
+          <Image src='/assets/images/ourMission.jpg' className={styles.image}  alt='Our Mission'/>
         </Col>
       </Row>
       {/* xxxxxx END MOBILE VIEW */}

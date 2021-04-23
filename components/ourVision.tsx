@@ -46,7 +46,7 @@ export const OurVision = () => {
           </div>
         </Col>
         <Col xl={{ span: "6" }} md='12'>
-          <Image src='/assets/images/ourVision.jpg' className={styles.image} />
+          <Image src='/assets/images/ourVision.jpg' className={styles.image} alt='Our Vision'/>
         </Col>
       </Row>
     </section>

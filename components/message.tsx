@@ -48,7 +48,8 @@ export const Message: React.FC<messageProps> = () => {
           </div>
         </Col>
         <Col lg={{ span: "6" }}>
-          <Image src='/assets/images/Chairman.jpg' className={styles.image} />
+          <Image src='/assets/images/Chairman.jpg' className={styles.image} 
+          alt='Syed Hashim Raza'/>
         </Col>
       </Row>
     </section>

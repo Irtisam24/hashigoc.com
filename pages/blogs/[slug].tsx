@@ -65,18 +65,13 @@ export default function SingleBlog({ data }) {
             {data.created_at.slice(0, 10)}
           </small>
         </h1>
-        
+
         <Image
           src={`/assets/images/${data.blog_image}`}
           fluid
           className='w-100'
+          alt={data.blog_title}
         />
-        {/* <Image
-          src={`/assets/images/${data.blog_image}`}
-          layout='responsive'
-          width={100}
-          height={40}
-        /> */}
         <div className={`${styles.bodySection}`}>
           <div dangerouslySetInnerHTML={createMarkUp(data.blog_content)} />
         </div>

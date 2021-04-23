@@ -45,7 +45,7 @@ export const Footer: React.FC<footerProps> = () => {
         <Col lg='4'>
           <ul className={styles.footerLinksList}>
             <li className={`${styles.singleLink} normalParagraph`}>
-              <Link href='/contacts'>
+              <Link href='/contact-us'>
                 <a className={`${styles.link}`}> Contact Us</a>
               </Link>
             </li>

@@ -1,4 +1,4 @@
-import { userInput } from "../pages/contacts";
+import { userInput } from "../pages/contact-us";
 import { formInputs } from "../components/postings";
 
 export interface formErrors {

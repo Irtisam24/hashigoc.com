@@ -25,7 +25,8 @@ export const Location: React.FC<locationProps> = () => {
       </div>
       <Row className={styles.desktopView}>
         <Col lg={{ span: "6" }}>
-          <Image src='/assets/images/Location.jpg' className={styles.image} />
+          <Image src='/assets/images/Location.jpg' className={styles.image} 
+          alt='Hashi group of Companies'/>
         </Col>
 
         <Col lg='6' sm='12'>
@@ -67,7 +68,8 @@ export const Location: React.FC<locationProps> = () => {
           </div>
         </Col>
         <Col sm='12'>
-          <Image src='/assets/images/Location.jpg' className={styles.image} />
+          <Image src='/assets/images/Location.jpg' className={styles.image} 
+          alt='Hashi group of Companies'/>
         </Col>
       </Row>
       {/* xxxxx END mobile View */}

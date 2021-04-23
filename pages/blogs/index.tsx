@@ -45,6 +45,7 @@ export default function Blogs({ data }) {
                     <Image
                       src={`/assets/images/${blog.blog_image}`}
                       className={`${styles.blogImage}`}
+                      alt={blog.blog_title}
                     />
                   </Link>
                   <p className={`${styles.createdAt}`}>

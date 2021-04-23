@@ -8,11 +8,13 @@ interface singleServiceProps {
   logoImage: string;
   title: string;
   details: string;
+  altImageDescription: string;
 }
 
 export const SingleService: React.FC<singleServiceProps> = ({
   mainImage,
   logoImage,
+  altImageDescription,
   title,
   details,
 }) => {
@@ -23,6 +25,7 @@ export const SingleService: React.FC<singleServiceProps> = ({
         <Image
           src={`/assets/images/${mainImage}`}
           className={`${styles.mainImage}`}
+          alt={altImageDescription}
         />
       </div>
       <div className='container my-5'>
@@ -31,6 +34,7 @@ export const SingleService: React.FC<singleServiceProps> = ({
             <Image
               src={`/assets/images/${logoImage}`}
               className={`${styles.logoImage}`}
+              alt={altImageDescription}
             />
           </Col>
           <Col lg={{ span: "7", offset: "1" }} md='12' sm='12'>

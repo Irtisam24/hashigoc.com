@@ -22,6 +22,7 @@ export default function Services() {
           mainImage='mimars.png'
           logoImage='mimarsLogo.png'
           title='ARCHITECHTURAL SERVICES'
+          altImageDescription='Mimaars Architectures'
           details='Mimaar understands designing your home is a very personal act and choosing the right architect to assist you in that process is extremely important. Our perspective is developing optimal solutions designed to identify the best answers and create new value to your property. We are working to create masterpieces in the form of designer house.
 
           We approach each project collaboratively and without presumption to customize solutions for the owner, the site, and all users. Mimaar co-creates with each client throughout planning, programming, schematic design, design development, construction documents, and construction administration to design environments that definitely impact people’s lives. Our ability to deliver complete end-to-end solutions creates places that improve communal amenities..
@@ -32,7 +33,8 @@ export default function Services() {
             mainImage='shr.png'
             logoImage='shrLogo.png'
             title='DIGITAL MARKETING'
-            details={`SHR Marketing 360o is Briliant in Terms of Digital Marketing , SHR has Digital Marketing Magicians.
+            altImageDescription='Shr Makrketing 360'
+            details={`SHR Marketing 360o is Brilliant in Terms of Digital Marketing , SHR has Digital Marketing Magicians.
 
             Our mission is to deliver the WOW factor through measurable results to our clients & to do the magic of marketing to addict the audience.
             
@@ -46,6 +48,7 @@ export default function Services() {
           <SingleService
             mainImage='hash.png'
             logoImage='hashLogo.png'
+            altImageDescription='Hash Real Estate And Builders'
             title='REALESTATE AND BUILDERS'
             details='Hash real estate and builders is a premium and prominent name in the profession of constructional services. It provides the free approach to customers to develop their own desired house, villa, bunglaow, shopping mall and any kind of residential community. The grey and finished structure will be exactly as according to the customer needs and there will be no compromise in it and this is the assurity of Hash RealEstate and Builders.
 
