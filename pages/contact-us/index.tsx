@@ -190,7 +190,7 @@ export default function Contacts() {
               <p className={`${styles.headings}`}>Head Office</p>
               <div className={`${styles.detailsSection}`}>
                 <p className={`${styles.singleDetail}`}>
-                  G T Road، Sector A DHA Phase II,
+                  G T Road, Sector A DHA Phase II,
                 </p>
                 <p className={`${styles.singleDetail}`}>
                   Rawalpindi, Islamabad
