@@ -33,6 +33,9 @@
       @include useGoldenText;
       @include usePlayful;
       white-space: nowrap;
+      @media screen and (min-width:1400px) and (max-width:1600px){
+        left:20%;
+      }
       @media screen and (max-width: 1400px) and (min-width: 800px) {
         font-size: 3rem;
       }
